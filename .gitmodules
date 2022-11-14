@@ -1,0 +1,3 @@
+[submodule "Plugins/accelbyte-unreal-sdk"]
+	path = Plugins/accelbyte-unreal-sdk
+	url = https://github.com/AccelByte/accelbyte-unreal-sdk-plugin.git
