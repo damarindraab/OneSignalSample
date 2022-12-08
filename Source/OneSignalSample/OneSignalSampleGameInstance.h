@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Core/AccelByteEnvironment.h"
 
 #include "OneSignalSampleGameInstance.generated.h"
 
@@ -24,4 +25,7 @@ public:
 
 	UPROPERTY(BlueprintAssignable)
 	FOnPromptForPushNotifReceived OnPromptForPushNotifReceived;
+
+	UFUNCTION(BlueprintCallable)
+	void SetAccelByteEnvironment(ESettingsEnvironment Environment);
 };

@@ -3,6 +3,7 @@
 
 #include "OneSignalSampleGameInstance.h"
 
+#include "AccelByteUe4SdkModule.h"
 #include "OneSignal/OneSignalLibrary.h"
 
 void UOneSignalSampleGameInstance::OnStart()
@@ -20,5 +21,10 @@ void UOneSignalSampleGameInstance::InitializeOneSignal(const FString& AppID)
 	{
 		OnPromptForPushNotifReceived.Broadcast(bAccepted);
 	}));
-	
+}
+
+void UOneSignalSampleGameInstance::SetAccelByteEnvironment(ESettingsEnvironment Environment)
+{
+	IAccelByteUe4SdkModuleInterface& ABSDKModule = IAccelByteUe4SdkModuleInterface::Get();
+	ABSDKModule.SetEnvironment(Environment);
 }
